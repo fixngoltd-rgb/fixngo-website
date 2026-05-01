@@ -334,6 +334,11 @@ body {
 @media (max-width: 768px) {
   .container { padding: 0 24px; }
   .section { padding: 90px 0; }
+  .nav { height: 75px; }
+  .logo-icon { width: 42px; height: 42px; font-size: 18px; }
+  .logo-text { font-size: 26px; }
+  .logo-text span { font-size: 12px; letter-spacing: 1.5px; }
+  .mobile-menu { padding: 32px 24px; top: 75px; }
   .hero-grid, .about-grid, .why-grid, .contact-grid, .service-content-grid { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
   .hero-stats { flex-wrap: wrap; gap: 36px; }
@@ -343,7 +348,7 @@ body {
   .values-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 48px; }
   .cta-inner { flex-direction: column; text-align: center; }
-  .nav-links, .nav-cta .btn { display: none; }
+  .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .services-header { flex-direction: column; align-items: flex-start; gap: 24px; }
   .form-row { grid-template-columns: 1fr; }
@@ -351,7 +356,6 @@ body {
   .service-detail-imgs { grid-template-columns: 1fr; }
   .service-detail-img:first-child { grid-column: span 1; }
   .about-features { grid-template-columns: 1fr; }
-  .mobile-menu { padding: 32px 24px; }
   .contact-form { padding: 40px 28px; }
   .sidebar-card { padding: 36px 24px; }
   .hero-title { font-size: clamp(52px, 10vw, 80px); }
