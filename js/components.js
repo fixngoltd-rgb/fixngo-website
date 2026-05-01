@@ -2,8 +2,9 @@
 const NAV_HTML = `
 <header class="header">
   <nav class="nav container">
+  
     <a href="index.html" class="logo">
-      <div class="logo-icon">F&G</div>
+      <img src="imgs/logo/Logo.png" alt="FIX & GO Property Maintenance Logo" style="height: 56px; width: auto; max-width: 250px;">
       <div class="logo-text">FIX & GO<span>Property Maintenance</span></div>
     </a>
     <ul class="nav-links">
@@ -13,7 +14,7 @@ const NAV_HTML = `
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="tel:03031111111" class="phone-link">📞 0303 XXX XXXX</a>
+      <a href="tel:07738737000" class="phone-link">📞 07738737000</a>
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
     </div>
     <button class="hamburger" aria-label="Menu">
@@ -70,13 +71,15 @@ const FOOTER_HTML = `
         </ul>
       </div>
       <div>
-        <h4 class="footer-col-title">Contact</h4>
-        <ul class="footer-links">
-          <li><a href="mailto:fixngoltd@gmail.com">fixngoltd@gmail.com</a></li>
-          <li><a href="tel:03031111111">0303 XXX XXXX</a></li>
-          <li style="color:var(--gray);font-size:14px">Available Mon–Sat<br>8am – 6pm</li>
-        </ul>
-      </div>
+  <h4 class="footer-col-title">Contact</h4>
+  <ul class="footer-links">
+    <li><a href="mailto:fixngoltd@gmail.com">fixngoltd@gmail.com</a></li>
+    <li><a href="tel:07738737000">07738737000</a></li>
+    <li style="color: rgba(255, 255, 255, 0.45);">1 Ashville Avenue, B34 6NA</li>
+    <li style="color: var(--gray); font-size: 14px;">Available Mon–Sat<br>
+      8am – 6pm</li>
+  </ul>
+</div>
     </div>
     <div class="footer-bottom">
       <p class="footer-copy">© 2025 FIX & GO Property Maintenance Ltd. All rights reserved.</p>
