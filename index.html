@@ -3,9 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FIX & GO Property Maintenance | UK Residential Services</title>
-  <meta name="description" content="Fix & Go Property Maintenance — your trusted partner for all residential property care in the UK. Electrical, plumbing, cleaning, roofing and 16 more services.">
+  <title>FIX & GO Property Maintenance | UK Property Services</title>
+  <meta name="description" content="Fix & Go Property Maintenance — your trusted partner for all residential and commercial property care in the UK. Electrical, plumbing, cleaning, roofing and 16 more services.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== PARTNERS STRIP ===== */
+    .partners-strip {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+      overflow: hidden;
+    }
+    .partners-label {
+      text-align: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .partners-track-wrap { overflow: hidden; }
+    .partners-track {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      animation: partnerScroll 22s linear infinite;
+      white-space: nowrap;
+      width: max-content;
+    }
+    .partner-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .partner-logo {
+      height: 36px;
+      display: flex;
+      align-items: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      opacity: 0.55;
+      transition: opacity 0.2s;
+      filter: grayscale(100%);
+    }
+    .partner-logo:hover { opacity: 1; filter: none; }
+    .partner-logo.purplebricks { color: #5c2d91; }
+    .partner-logo.bcc { color: #003087; }
+    .partner-logo.accommodation { color: #e8742a; }
+    .partner-divider {
+      width: 1px; height: 28px;
+      background: var(--border);
+      flex-shrink: 0;
+    }
+    @keyframes partnerScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ===== TRUSTPILOT SECTION ===== */
+    .trustpilot-section {
+      background: #1a1a1a;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .trustpilot-section::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: #00b67a;
+    }
+    .tp-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 52px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .tp-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .tp-logo-box {
+      background: #00b67a;
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .tp-score-area { }
+    .tp-score-big {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 56px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+    }
+    .tp-score-stars {
+      display: flex;
+      gap: 4px;
+      margin-top: 4px;
+    }
+    .tp-star {
+      width: 28px; height: 28px;
+      background: #00b67a;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: #fff;
+      border-radius: 3px;
+    }
+    .tp-star.half { background: linear-gradient(90deg, #00b67a 70%, #2d2d2d 70%); }
+    .tp-score-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 8px;
+    }
+    .tp-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .tp-card {
+      background: #242424;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 32px;
+      transition: border-color 0.25s;
+    }
+    .tp-card:hover { border-color: #00b67a; }
+    .tp-card-stars {
+      display: flex; gap: 3px; margin-bottom: 18px;
+    }
+    .tp-card-star {
+      width: 22px; height: 22px;
+      background: #00b67a;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: #fff; border-radius: 2px;
+    }
+    .tp-card-text {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.75;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+    .tp-card-author {
+      display: flex; align-items: center; gap: 12px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .tp-avatar {
+      width: 40px; height: 40px;
+      background: #00b67a;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900; font-size: 17px; color: #fff;
+    }
+    .tp-author-name {
+      font-weight: 600; font-size: 15px; color: #fff;
+    }
+    .tp-author-date {
+      font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 2px;
+    }
+    .tp-verified {
+      margin-left: auto;
+      font-size: 11px; color: #00b67a; font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .tp-footer {
+      text-align: center;
+      margin-top: 44px;
+    }
+    .tp-footer-text {
+      font-size: 14px; color: rgba(255,255,255,0.35); margin-bottom: 16px;
+    }
+    .tp-cta {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: #00b67a; color: #fff;
+      padding: 14px 32px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px; font-weight: 700; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .tp-cta:hover { background: #009e6a; }
+
+    @media (max-width: 900px) {
+      .tp-reviews-grid { grid-template-columns: 1fr; }
+      .tp-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
 
@@ -21,11 +220,11 @@
             <span class="hero-badge">UK Property Specialists</span>
           </div>
           <h1 class="hero-title">
-            Your Home
+            Your Property
             <span class="line-2">Deserves</span>
             <span class="line-3">Expert Care</span>
           </h1>
-          <p class="hero-desc">From emergency repairs to full property upkeep — Fix & Go delivers reliable, affordable maintenance services for homeowners across the UK.</p>
+          <p class="hero-desc">From emergency repairs to full property upkeep — Fix & Go delivers reliable, affordable maintenance services for homeowners and businesses across the UK.</p>
           <div class="hero-actions">
             <a href="contact.html" class="btn btn-primary">Get a Free Quote →</a>
             <a href="services.html" class="btn btn-outline">View All Services</a>
@@ -37,25 +236,25 @@
             </div>
             <div>
               <div class="stat-num">500+</div>
-              <div class="stat-label">Happy Homeowners</div>
+              <div class="stat-label">Jobs Completed</div>
             </div>
             <div>
-              <div class="stat-num">100%</div>
-              <div class="stat-label">Satisfaction Goal</div>
+              <div class="stat-num">4.9★</div>
+              <div class="stat-label">Trustpilot Rating</div>
             </div>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-img-stack">
             <div class="hero-img-main">
-              <img src="https://images.unsplash.com/photo-1583847268964-b28ce8f7596c?auto=format&fit=crop&w=1600&q=80" alt="Beautiful residential property exterior">
+              <img src="https://images.unsplash.com/photo-1583847268964-b28ce8f7596c?auto=format&fit=crop&w=1600&q=80" alt="Residential property exterior">
             </div>
             <div class="hero-img-secondary">
-              <img src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&w=800&q=80" alt="Professional maintenance contractor">
+              <img src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&fit=crop&w=800&q=80" alt="Professional maintenance contractor at work">
             </div>
             <div class="hero-img-card">
               <div class="card-val">4.9★</div>
-              <div class="card-label">Customer Rating</div>
+              <div class="card-label">Trustpilot Rating</div>
             </div>
           </div>
         </div>
@@ -63,7 +262,7 @@
     </div>
   </section>
 
-  <!-- SCROLLING STRIP -->
+  <!-- SERVICES SCROLLING STRIP -->
   <div class="services-strip">
     <div class="strip-inner">
       <span class="strip-item">Cleaning</span>
@@ -78,6 +277,69 @@
       <span class="strip-item">Damp Proofing</span>
       <span class="strip-item">Handyman</span>
       <span class="strip-item">Heating</span>
+      <span class="strip-item">Joinery & Flooring</span>
+      <span class="strip-item">Tree Surgery</span>
+      <span class="strip-item">Double Glazing</span>
+      <span class="strip-item">Appliances</span>
+    </div>
+  </div>
+
+  <!-- TRUSTED PARTNERS STRIP -->
+  <div class="partners-strip">
+    <p class="partners-label">Trusted by</p>
+    <div class="partners-track-wrap">
+      <div class="partners-track">
+        <!-- Set 1 -->
+        <div class="partner-item">
+          <div class="partner-logo purplebricks">◆ Purplebricks</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo bcc">⬡ Birmingham City Council</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo accommodation">⌂ Accommodation.co.uk</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo" style="color:#333">🏠 Private Landlords</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo" style="color:#444">🏢 Letting Agents</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo" style="color:#555">🏛 Housing Associations</div>
+        </div>
+        <div class="partner-divider"></div>
+        <!-- Set 2 (duplicate for seamless loop) -->
+        <div class="partner-item">
+          <div class="partner-logo purplebricks">◆ Purplebricks</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo bcc">⬡ Birmingham City Council</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo accommodation">⌂ Accommodation.co.uk</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo" style="color:#333">🏠 Private Landlords</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo" style="color:#444">🏢 Letting Agents</div>
+        </div>
+        <div class="partner-divider"></div>
+        <div class="partner-item">
+          <div class="partner-logo" style="color:#555">🏛 Housing Associations</div>
+        </div>
+        <div class="partner-divider"></div>
+      </div>
     </div>
   </div>
 
@@ -98,8 +360,8 @@
         </div>
         <div class="about-content">
           <div class="section-label">About Fix & Go</div>
-          <h2 class="section-title">Built Around <span>Your Home</span></h2>
-          <p class="section-desc">We specialise exclusively in residential properties, giving homeowners a single trusted partner for every maintenance need — from a leaking tap to a full boiler replacement.</p>
+          <h2 class="section-title">Built Around <span>Your Property</span></h2>
+          <p class="section-desc">We give homeowners, landlords and businesses a single trusted partner for every maintenance need — from a leaking tap to a full boiler replacement.</p>
           <div class="about-features">
             <div class="about-feature">
               <div class="feature-icon">✅</div>
@@ -107,11 +369,11 @@
             </div>
             <div class="about-feature">
               <div class="feature-icon">💷</div>
-              <div class="feature-text"><strong>Affordable Pricing</strong><span>No hidden charges</span></div>
+              <div class="feature-text"><strong>Competitive Pricing</strong><span>No hidden charges</span></div>
             </div>
             <div class="about-feature">
               <div class="feature-icon">⚡</div>
-              <div class="feature-text"><strong>Fast Response</strong><span>Emergency cover available</span></div>
+              <div class="feature-text"><strong>Fast Response</strong><span>Same-day & emergency cover</span></div>
             </div>
             <div class="about-feature">
               <div class="feature-icon">🛡️</div>
@@ -137,97 +399,97 @@
         <a href="services.html" class="btn btn-outline">See All Services →</a>
       </div>
       <div class="services-grid">
-        <a href="service-cleaning.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581578731522-745d05ad9a2d?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-cleaning.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/cleaning.jpeg')">
           <div class="service-num">01</div>
           <div class="service-name" style="color:#fff">Cleaning Services</div>
           <div class="service-brief" style="color:#ccc">Routine, deep clean, mould remediation, move-in/out.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-electrical.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-electrical.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/electric.jpeg')">
           <div class="service-num">02</div>
           <div class="service-name" style="color:#fff">Electrical Services</div>
           <div class="service-brief" style="color:#ccc">Certified electricians for installations, repairs & safety.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-plumbing.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1585909695459-f8646b116280?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-plumbing.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/plumbing.jpeg')">
           <div class="service-num">03</div>
           <div class="service-name" style="color:#fff">Plumbing Services</div>
           <div class="service-brief" style="color:#ccc">Leaks, drains, fixtures, emergency repairs & inspections.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-boiler.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1585338927000-1c787b17eb5e?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-boiler.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/boiler.jpeg')">
           <div class="service-num">04</div>
-          <div class="service-name" style="color:#fff">Boiler Repair & Install</div>
+          <div class="service-name" style="color:#fff">Boiler Repair & Installation</div>
           <div class="service-brief" style="color:#ccc">Certified engineers for servicing, repair & new installs.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-windows.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-windows.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/windows.jpeg')">
           <div class="service-num">05</div>
           <div class="service-name" style="color:#fff">Double Glazed Windows</div>
           <div class="service-brief" style="color:#ccc">Installation, repair & maintenance of double glazing.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-locksmith.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1614362945203-74b886d634be?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-locksmith.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/locksmith.jpeg')">
           <div class="service-num">06</div>
           <div class="service-name" style="color:#fff">Locksmith Services</div>
           <div class="service-brief" style="color:#ccc">Lock fitting, repair, replacements & emergency entry.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-roofing.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1632759145355-6b83f3f2d2b5?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-roofing.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/roofing.jpeg')">
           <div class="service-num">07</div>
           <div class="service-name" style="color:#fff">Roofing Services</div>
           <div class="service-brief" style="color:#ccc">Installations, repairs & inspections — all roof types.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-plastering.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-plastering.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/painting.jpeg')">
           <div class="service-num">08</div>
           <div class="service-name" style="color:#fff">Plastering & Decorating</div>
           <div class="service-brief" style="color:#ccc">Skimming, painting, wallpapering & decorative finishes.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-appliances.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-appliances.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/appliance.jpeg')">
           <div class="service-num">09</div>
           <div class="service-name" style="color:#fff">Appliance Services</div>
           <div class="service-brief" style="color:#ccc">Washing machines, ovens, fridges — install, repair & maintain.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-heating.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-heating.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/heating.jpeg')">
           <div class="service-num">10</div>
           <div class="service-name" style="color:#fff">Heating Services</div>
           <div class="service-brief" style="color:#ccc">Full heating installs, repairs, servicing & inspections.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-tree.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-tree.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/fencing.jpeg')">
           <div class="service-num">11</div>
           <div class="service-name" style="color:#fff">Tree Surgery & Fencing</div>
           <div class="service-brief" style="color:#ccc">Pruning, removal, fencing installation & repairs.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-handyman.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581244276891-9955ad74447c?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-handyman.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/handyman.jpeg')">
           <div class="service-num">12</div>
           <div class="service-name" style="color:#fff">General Handyman</div>
           <div class="service-brief" style="color:#ccc">Any job, any size — furniture, shelving, minor works.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-pest.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1587841872195-2009210214c7?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-pest.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/pest.jpeg')">
           <div class="service-num">13</div>
           <div class="service-name" style="color:#fff">Pest Control</div>
           <div class="service-brief" style="color:#ccc">Certified pest removal for homes and businesses.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-drain.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1621905252507-b354bcadcabc?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-drain.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/drain.jpeg')">
           <div class="service-num">14</div>
           <div class="service-name" style="color:#fff">Drain Services</div>
           <div class="service-brief" style="color:#ccc">Unblocking, CCTV surveys, jetting & maintenance.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-damp.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-damp.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/damp.jpeg')">
           <div class="service-num">15</div>
           <div class="service-name" style="color:#fff">Damp Proofing</div>
           <div class="service-brief" style="color:#ccc">Rising damp, condensation & waterproofing solutions.</div>
           <div class="service-arrow">→</div>
         </a>
-        <a href="service-joinery.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581850518616-cee8107f7fa2?auto=format&fit=crop&w=800&q=80')">
+        <a href="service-joinery.html" class="service-card service-card-bg" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('imgs/services/joinery.jpeg')">
           <div class="service-num">16</div>
           <div class="service-name" style="color:#fff">Joinery & Flooring</div>
           <div class="service-brief" style="color:#ccc">Hardwood, laminate, vinyl, tile — supply & fit.</div>
@@ -244,34 +506,34 @@
         <div class="why-content">
           <div class="section-label">Why Choose Us</div>
           <h2 class="section-title">The Fix & Go <span>Difference</span></h2>
-          <p class="section-desc">We don't just fix things — we build lasting relationships with homeowners who trust us to care for their most valuable asset.</p>
+          <p class="section-desc">One team, all trades. We cover every job so our clients never have to manage multiple contractors.</p>
           <div class="why-list">
             <div class="why-item">
               <div class="why-number">01</div>
               <div class="why-item-content">
-                <strong>One Company, All Services</strong>
-                <p>No need to juggle multiple contractors. Fix & Go covers 16 service categories under one trusted roof.</p>
+                <strong>All Trades, One Company</strong>
+                <p>16 services covered by a single team. One call, one invoice, no hassle.</p>
               </div>
             </div>
             <div class="why-item">
               <div class="why-number">02</div>
               <div class="why-item-content">
-                <strong>Transparent, Affordable Pricing</strong>
-                <p>We quote upfront and stick to it. No surprise costs, no hidden fees — ever.</p>
+                <strong>Competitive, Transparent Quotes</strong>
+                <p>We price fairly and quote upfront. No surprise costs, no hidden fees — ever.</p>
               </div>
             </div>
             <div class="why-item">
               <div class="why-number">03</div>
               <div class="why-item-content">
-                <strong>Experienced, Vetted Team</strong>
-                <p>Every engineer and tradesperson is trained, certified where required, and fully insured.</p>
+                <strong>Fast Response Times</strong>
+                <p>Same-day and next-day attendance as standard. Emergency cover available around the clock.</p>
               </div>
             </div>
             <div class="why-item">
               <div class="why-number">04</div>
               <div class="why-item-content">
-                <strong>Residential Focus Only</strong>
-                <p>We specialise exclusively in homes, meaning every process is tailored to homeowners — not big commercial clients.</p>
+                <strong>Certified & Fully Insured</strong>
+                <p>Every operative is trained, certified where required, and fully insured. Gas Safe, NICEIC and more.</p>
               </div>
             </div>
           </div>
@@ -288,7 +550,7 @@
               </div>
               <div>
                 <div class="why-mini-num">4.9★</div>
-                <div class="why-mini-label">Avg. Rating</div>
+                <div class="why-mini-label">Trustpilot Rating</div>
               </div>
               <div>
                 <div class="why-mini-num">100%</div>
@@ -314,7 +576,7 @@
         <div class="process-step">
           <div class="step-num">01</div>
           <div class="step-title">Get in Touch</div>
-          <div class="step-desc">Call us or fill in our quick quote form. We respond same day.</div>
+          <div class="step-desc">Call us or fill in our quick quote form. We respond the same day.</div>
         </div>
         <div class="process-step">
           <div class="step-num">02</div>
@@ -335,45 +597,97 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section">
+  <!-- TRUSTPILOT SECTION -->
+  <section class="trustpilot-section">
     <div class="container">
-      <div class="section-label">What Customers Say</div>
-      <h2 class="section-title">Real <span>Reviews</span></h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Fixed our boiler within 24 hours of calling — during winter! Absolutely brilliant service. Would not hesitate to recommend Fix & Go to anyone."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">S</div>
+      <div class="tp-header">
+        <div>
+          <div class="section-label" style="color:#00b67a">
+            <span style="background:#00b67a;width:36px;height:2px;display:inline-block"></span>
+            Customer Reviews
+          </div>
+          <h2 class="section-title" style="color:#fff">Rated <span style="color:#00b67a">Excellent</span><br>on Trustpilot</h2>
+        </div>
+        <div style="text-align:right">
+          <div class="tp-brand" style="justify-content:flex-end;margin-bottom:16px">
+            <div class="tp-logo-box">★ Trustpilot</div>
+          </div>
+          <div class="tp-score-big">4.9</div>
+          <div class="tp-score-stars">
+            <div class="tp-star">★</div>
+            <div class="tp-star">★</div>
+            <div class="tp-star">★</div>
+            <div class="tp-star">★</div>
+            <div class="tp-star">★</div>
+          </div>
+          <div class="tp-score-label">Based on verified reviews</div>
+        </div>
+      </div>
+
+      <div class="tp-reviews-grid">
+        <div class="tp-card">
+          <div class="tp-card-stars">
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+          </div>
+          <p class="tp-card-text">"Boiler broke down on one of the coldest nights of the year. Fix & Go had an engineer out the next morning and it was sorted within a couple of hours. Brilliant service, reasonable price. Will definitely use again."</p>
+          <div class="tp-card-author">
+            <div class="tp-avatar">S</div>
             <div>
-              <div class="author-name">Sarah M.</div>
-              <div class="author-location">Manchester</div>
+              <div class="tp-author-name">Sarah M.</div>
+              <div class="tp-author-date">Manchester · November 2024</div>
             </div>
+            <div class="tp-verified">✓ Verified</div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Used them for a full house clean after buying a new property. The team was thorough, professional and left everything spotless. Great value."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">J</div>
+
+        <div class="tp-card">
+          <div class="tp-card-stars">
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+          </div>
+          <p class="tp-card-text">"Used Fix & Go for a full end-of-tenancy clean and electrical check before new tenants moved in. Both teams were professional, on time and the work was spotless. Exactly what a landlord needs — reliable and hassle-free."</p>
+          <div class="tp-card-author">
+            <div class="tp-avatar">J</div>
             <div>
-              <div class="author-name">James T.</div>
-              <div class="author-location">London</div>
+              <div class="tp-author-name">James T.</div>
+              <div class="tp-author-date">Birmingham · October 2024</div>
             </div>
+            <div class="tp-verified">✓ Verified</div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="testimonial-text">"Had damp issues for years. Fix & Go diagnosed the problem properly and sorted it permanently. No more mould, no more damp smell. Amazing."</p>
-          <div class="testimonial-author">
-            <div class="author-avatar">A</div>
+
+        <div class="tp-card">
+          <div class="tp-card-stars">
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+            <div class="tp-card-star">★</div>
+          </div>
+          <p class="tp-card-text">"Had damp coming through the walls for years. Two other companies gave me temporary fixes. Fix & Go properly diagnosed it as rising damp, treated it correctly and replastered. Not a trace of it since. Highly recommend."</p>
+          <div class="tp-card-author">
+            <div class="tp-avatar">A</div>
             <div>
-              <div class="author-name">Aisha K.</div>
-              <div class="author-location">Birmingham</div>
+              <div class="tp-author-name">Aisha K.</div>
+              <div class="tp-author-date">London · September 2024</div>
             </div>
+            <div class="tp-verified">✓ Verified</div>
           </div>
         </div>
+      </div>
+
+      <div class="tp-footer">
+        <p class="tp-footer-text">Join hundreds of satisfied customers across the UK</p>
+        <a href="https://www.trustpilot.com" target="_blank" rel="noopener" class="tp-cta">
+          ★ Read All Reviews on Trustpilot
+        </a>
       </div>
     </div>
   </section>
@@ -414,7 +728,7 @@
               <div class="contact-icon">📞</div>
               <div>
                 <div class="contact-label">Phone</div>
-                <div class="contact-value"><a href="tel:07738737000">07738737000</a></div>
+                <div class="contact-value"><a href="tel:07738737000">07738 737 000</a></div>
               </div>
             </div>
             <div class="contact-item">
