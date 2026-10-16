@@ -15,7 +15,7 @@ const NAV_HTML = `
     </ul>
     <div class="nav-cta">
       <a href="tel:07738737000" class="phone-link">📞 07738 737 000</a>
-      <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+      <a href="contact.html#quote-form" class="btn btn-primary">Get a Quote</a>
     </div>
     <button class="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -28,7 +28,7 @@ const NAV_HTML = `
     <li><a href="services.html">Services</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="contact.html">Contact</a></li>
-    <li><a href="contact.html" style="color:var(--orange)">Get a Free Quote →</a></li>
+    <li><a href="contact.html#quote-form" style="color:var(--orange)">Get a Free Quote →</a></li>
   </ul>
 </div>`;
 
@@ -62,7 +62,7 @@ const FOOTER_HTML = `
           <li><a href="about.html">About Us</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html">Get a Quote</a></li>
+          <li><a href="contact.html#quote-form">Get a Quote</a></li>
         </ul>
       </div>
       <div>
