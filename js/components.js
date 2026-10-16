@@ -14,7 +14,7 @@ const NAV_HTML = `
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a href="tel:07738737000" class="phone-link">📞 07738737000</a>
+      <a href="tel:07738737000" class="phone-link">📞 07738 737 000</a>
       <a href="contact.html" class="btn btn-primary">Get a Quote</a>
     </div>
     <button class="hamburger" aria-label="Menu">
@@ -38,15 +38,10 @@ const FOOTER_HTML = `
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="index.html" class="logo" style="margin-bottom:20px;display:inline-flex">
-          <div class="logo-icon">F&G</div>
+          <img src="imgs/logo/Logo.png" alt="" width="56" height="56" style="height:56px;width:56px">
           <div class="logo-text">FIX & GO<span>Property Maintenance</span></div>
         </a>
         <p class="footer-desc">Your trusted partner for all residential property maintenance needs across the UK. Quality work, reliable service, affordable prices.</p>
-        <div class="footer-social">
-          <a href="#" class="social-link">f</a>
-          <a href="#" class="social-link">in</a>
-          <a href="#" class="social-link">ig</a>
-        </div>
       </div>
       <div>
         <h4 class="footer-col-title">Services</h4>
@@ -74,18 +69,17 @@ const FOOTER_HTML = `
   <h4 class="footer-col-title">Contact</h4>
   <ul class="footer-links">
     <li><a href="mailto:fixngoltd@gmail.com">fixngoltd@gmail.com</a></li>
-    <li><a href="tel:07738737000">07738737000</a></li>
-    <li style="color: rgba(255, 255, 255, 0.45);">1 Ashville Avenue, B34 6NA</li>
-    <li style="color: var(--gray); font-size: 14px;">Available Mon–Sat<br>
+    <li><a href="tel:07738737000">07738 737 000</a></li>
+    <li style="color: rgba(255, 255, 255, 0.7);">1 Ashville Avenue, B34 6NA</li>
+    <li style="color: rgba(255,255,255,0.7); font-size: 14px;">Available Mon–Sat<br>
       8am – 6pm</li>
   </ul>
 </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">© 2025 FIX & GO Property Maintenance Ltd. All rights reserved.</p>
+      <p class="footer-copy">© <span id="year"></span> FIX & GO Property Maintenance Ltd. All rights reserved.</p>
       <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </div>
   </div>
@@ -95,4 +89,6 @@ const FOOTER_HTML = `
 document.addEventListener('DOMContentLoaded', () => {
   document.body.insertAdjacentHTML('afterbegin', NAV_HTML);
   document.body.insertAdjacentHTML('beforeend', FOOTER_HTML);
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 });
