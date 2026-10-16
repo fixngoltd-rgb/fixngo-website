@@ -395,7 +395,6 @@ body {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1400px) {
   .container { padding: 0 48px; }
-  .services-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 1024px) {
@@ -465,3 +464,35 @@ body {
 html, body { overflow-x: clip; }
 
 #quote-form { scroll-margin-top: 110px; }
+
+/* ---- overhaul ---- */
+.ic{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-0.14em;flex-shrink:0}
+.feature-icon .ic,.contact-icon .ic{width:24px;height:24px;color:var(--orange-text)}
+.value-icon{width:60px;height:60px;border-radius:var(--radius);background:rgba(232,116,42,0.12);display:flex;align-items:center;justify-content:center;font-size:30px;color:var(--orange-text)}
+.value-icon .ic{width:30px;height:30px}
+.partner-logo .ic{width:20px;height:20px;margin-right:8px}
+.service-card-photo{padding:0!important;overflow:hidden;display:flex;flex-direction:column}
+.service-card-img{aspect-ratio:16/10;overflow:hidden;background:var(--bg-3)}
+.service-card-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.service-card-photo:hover .service-card-img img{transform:scale(1.05)}
+.service-card-body{padding:28px 28px 32px;display:flex;flex-direction:column;flex:1}
+.service-card-body .service-arrow{margin-top:auto;padding-top:20px;font-weight:700;color:var(--orange-text);font-size:16px}
+.service-hero>.container{width:100%}
+.service-hero,.contact-hero,.about-hero{background:linear-gradient(135deg,#1a1a1a 0%,#262220 100%)}
+.service-hero::after,.contact-hero::after,.about-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:4px;background:var(--orange-btn)}
+.service-hero .service-hero-title,.contact-hero .service-hero-title,.about-hero .service-hero-title{color:#fff}
+.service-hero .service-hero-title span,.contact-hero .service-hero-title span,.about-hero .service-hero-title span{color:#f4934f}
+.service-hero .service-hero-desc,.contact-hero .service-hero-desc,.about-hero .service-hero-desc{color:rgba(255,255,255,0.82)}
+.service-hero .breadcrumb a,.contact-hero .breadcrumb a,.about-hero .breadcrumb a,.service-hero .breadcrumb span,.contact-hero .breadcrumb span,.about-hero .breadcrumb span{color:rgba(255,255,255,0.7)}
+.service-hero .breadcrumb .current,.contact-hero .breadcrumb .current,.about-hero .breadcrumb .current{color:#fff}
+.service-hero .breadcrumb a:hover,.contact-hero .breadcrumb a:hover,.about-hero .breadcrumb a:hover{color:#fff}
+.service-hero .btn-outline{color:#fff;border-color:rgba(255,255,255,0.6)}
+.service-hero .btn-outline:hover{background:rgba(255,255,255,0.1);color:#fff;border-color:#fff}
+.contact-hero,.about-hero{padding:170px 0 80px}
+.service-hero{min-height:0;padding-top:130px;padding-bottom:50px}
+
+@media (max-width: 1100px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .services-grid { grid-template-columns: 1fr; } }
+.services-grid{gap:20px}
+.service-card-photo{border:1px solid var(--border);border-radius:var(--radius-lg)}
