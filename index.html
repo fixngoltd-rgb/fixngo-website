@@ -87,144 +87,6 @@
       to   { transform: translateX(-50%); }
     }
 
-    /* ===== TRUSTPILOT SECTION ===== */
-    .trustpilot-section {
-      background: #1a1a1a;
-      padding: 80px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .trustpilot-section::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 4px;
-      background: #007a54;
-    }
-    .tp-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 52px;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .tp-brand {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-    .tp-logo-box {
-      background: #007a54;
-      border-radius: 6px;
-      padding: 10px 16px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px;
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: 0.5px;
-    }
-    .tp-score-area { }
-    .tp-score-big {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 56px;
-      font-weight: 900;
-      color: #fff;
-      line-height: 1;
-    }
-    .tp-score-stars {
-      display: flex;
-      gap: 4px;
-      margin-top: 4px;
-    }
-    .tp-star {
-      width: 28px; height: 28px;
-      background: #007a54;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; color: #fff;
-      border-radius: 3px;
-    }
-    .tp-star.half { background: linear-gradient(90deg, #007a54 70%, #2d2d2d 70%); }
-    .tp-score-label {
-      font-size: 14px;
-      color: rgba(255,255,255,0.5);
-      margin-top: 8px;
-    }
-    .tp-reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .tp-card {
-      background: #242424;
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: 10px;
-      padding: 32px;
-      transition: border-color 0.25s;
-    }
-    .tp-card:hover { border-color: #007a54; }
-    .tp-card-stars {
-      display: flex; gap: 3px; margin-bottom: 18px;
-    }
-    .tp-card-star {
-      width: 22px; height: 22px;
-      background: #007a54;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 12px; color: #fff; border-radius: 2px;
-    }
-    .tp-card-text {
-      font-size: 16px;
-      color: rgba(255,255,255,0.8);
-      line-height: 1.75;
-      font-style: italic;
-      margin-bottom: 24px;
-    }
-    .tp-card-author {
-      display: flex; align-items: center; gap: 12px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.07);
-    }
-    .tp-avatar {
-      width: 40px; height: 40px;
-      background: #007a54;
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900; font-size: 17px; color: #fff;
-    }
-    .tp-author-name {
-      font-weight: 600; font-size: 15px; color: #fff;
-    }
-    .tp-author-date {
-      font-size: 12px; color: rgba(255,255,255,0.7); margin-top: 2px;
-    }
-    .tp-verified {
-      margin-left: auto;
-      font-size: 11px; color: #2fd6a0; font-weight: 600;
-      letter-spacing: 0.5px;
-    }
-    .tp-footer {
-      text-align: center;
-      margin-top: 44px;
-    }
-    .tp-footer-text {
-      font-size: 14px; color: rgba(255,255,255,0.7); margin-bottom: 16px;
-    }
-    .tp-cta {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: #007a54; color: #fff;
-      padding: 14px 32px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 16px; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase;
-      transition: background 0.2s;
-    }
-    .tp-cta:hover { background: #00634a; }
-
-    @media (max-width: 900px) {
-      .tp-reviews-grid { grid-template-columns: 1fr; }
-      .tp-header { flex-direction: column; align-items: flex-start; }
-    }
   </style>
 </head>
 <body>
@@ -259,20 +121,12 @@
               <div class="stat-num">500+</div>
               <div class="stat-label">Jobs Completed</div>
             </div>
-            <div>
-              <div class="stat-num">4.9★</div>
-              <div class="stat-label">Trustpilot Rating</div>
-            </div>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-img-stack">
             <div class="hero-img-main" role="img" aria-label="Fix &amp; Go engineer at work"></div>
             <div class="hero-img-secondary" role="img" aria-label="Fix &amp; Go tradesperson fitting a shelf"></div>
-            <div class="hero-img-card">
-              <div class="card-val">4.9★</div>
-              <div class="card-label">Trustpilot Rating</div>
-            </div>
           </div>
         </div>
       </div>
@@ -486,10 +340,6 @@
                 <div class="why-mini-label">Jobs Completed</div>
               </div>
               <div>
-                <div class="why-mini-num">4.9★</div>
-                <div class="why-mini-label">Trustpilot Rating</div>
-              </div>
-              <div>
                 <div class="why-mini-num">100%</div>
                 <div class="why-mini-label">Insured Work</div>
               </div>
@@ -530,101 +380,6 @@
           <div class="step-title">You're Satisfied</div>
           <div class="step-desc">We don't leave until you're completely happy with the work done.</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TRUSTPILOT SECTION -->
-  <section class="trustpilot-section">
-    <div class="container">
-      <div class="tp-header">
-        <div>
-          <div class="section-label" style="color:#2fd6a0">
-            <span style="background:#007a54;width:36px;height:2px;display:inline-block"></span>
-            Customer Reviews
-          </div>
-          <h2 class="section-title" style="color:#fff">Rated <span style="color:#2fd6a0">Excellent</span><br>on Trustpilot</h2>
-        </div>
-        <div style="text-align:right">
-          <div class="tp-brand" style="justify-content:flex-end;margin-bottom:16px">
-            <div class="tp-logo-box">★ Trustpilot</div>
-          </div>
-          <div class="tp-score-big">4.9</div>
-          <div class="tp-score-stars">
-            <div class="tp-star">★</div>
-            <div class="tp-star">★</div>
-            <div class="tp-star">★</div>
-            <div class="tp-star">★</div>
-            <div class="tp-star">★</div>
-          </div>
-          <div class="tp-score-label">Based on verified reviews</div>
-        </div>
-      </div>
-
-      <div class="tp-reviews-grid">
-        <div class="tp-card">
-          <div class="tp-card-stars">
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-          </div>
-          <p class="tp-card-text">"Boiler broke down on one of the coldest nights of the year. Fix & Go had an engineer out the next morning and it was sorted within a couple of hours. Brilliant service, reasonable price. Will definitely use again."</p>
-          <div class="tp-card-author">
-            <div class="tp-avatar">S</div>
-            <div>
-              <div class="tp-author-name">Sarah M.</div>
-              <div class="tp-author-date">Manchester · November 2024</div>
-            </div>
-            <div class="tp-verified">✓ Verified</div>
-          </div>
-        </div>
-
-        <div class="tp-card">
-          <div class="tp-card-stars">
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-          </div>
-          <p class="tp-card-text">"Used Fix & Go for a full end-of-tenancy clean and electrical check before new tenants moved in. Both teams were professional, on time and the work was spotless. Exactly what a landlord needs - reliable and hassle-free."</p>
-          <div class="tp-card-author">
-            <div class="tp-avatar">J</div>
-            <div>
-              <div class="tp-author-name">James T.</div>
-              <div class="tp-author-date">Birmingham · October 2024</div>
-            </div>
-            <div class="tp-verified">✓ Verified</div>
-          </div>
-        </div>
-
-        <div class="tp-card">
-          <div class="tp-card-stars">
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-            <div class="tp-card-star">★</div>
-          </div>
-          <p class="tp-card-text">"Had damp coming through the walls for years. Two other companies gave me temporary fixes. Fix & Go properly diagnosed it as rising damp, treated it correctly and replastered. Not a trace of it since. Highly recommend."</p>
-          <div class="tp-card-author">
-            <div class="tp-avatar">A</div>
-            <div>
-              <div class="tp-author-name">Aisha K.</div>
-              <div class="tp-author-date">London · September 2024</div>
-            </div>
-            <div class="tp-verified">✓ Verified</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="tp-footer">
-        <p class="tp-footer-text">Join hundreds of satisfied customers across the UK</p>
-        <a href="https://www.trustpilot.com" target="_blank" rel="noopener" class="tp-cta">
-          ★ Read All Reviews on Trustpilot
-        </a>
       </div>
     </div>
   </section>
